@@ -22,3 +22,293 @@
   font-weight: 700;
   src: local(""), url("../fonts/open-sans-v20-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/open-sans-v20-latin_cyrillic-700.woff") format("woff");
 }
+body {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.main-nav .main-nav__btn {
+  display: none;
+}
+.main-nav .main-nav__list {
+  list-style: none;
+  width: 873.5px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 21px;
+  padding: 0 24px 9px 19px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.main-nav .main-nav__item a {
+  text-decoration: none;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.main-nav .main-nav__item a:hover,
+.main-nav .main-nav__item a:focus {
+  color: white;
+  padding-bottom: 15px;
+  border-bottom: 1px solid white;
+}
+
+@media (max-width: 1023px) {
+  .main-nav .main-nav__list,
+.main-nav .main-nav__list--opened,
+.main-nav .main-nav__list--no-js {
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    height: 568px;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+  }
+  .main-nav .main-nav__list--closed {
+    display: none;
+  }
+  .main-nav .main-nav__item {
+    height: 60px;
+    background-color: #F6F6F6;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .main-nav .main-nav__item::after {
+    content: "";
+    position: absolute;
+    width: 7.4px;
+    height: 12px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 23px;
+    right: 25px;
+  }
+  .main-nav .main-nav__item a {
+    color: #48494D;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .main-nav .main-nav--closed {
+    display: none;
+  }
+  .main-nav .main-nav__btn--cross {
+    display: block;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    position: absolute;
+    border: none;
+    background-color: #FFFFFF;
+    background-image: url("../img/cross.svg");
+    background-size: cover;
+    top: 15px;
+    right: 14px;
+    cursor: pointer;
+  }
+  .main-nav .main-nav__btn--burger {
+    display: block;
+    width: 22px;
+    height: 13.5px;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/burger.svg");
+    background-size: contain;
+    top: 18.5px;
+    right: 13.75px;
+    cursor: pointer;
+  }
+  .main-nav .main-nav__btn--burger::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #0AD9C6;
+    top: -135%;
+    right: -63%;
+    z-index: -1;
+  }
+}
+.main {
+  position: relative;
+  padding-top: 256px;
+  margin-bottom: 240px;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  width: 1440px;
+  height: 825px;
+  background-image: url("../img/head_bike_desc.png");
+  z-index: -10;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: -63px;
+}
+.main .main__container {
+  display: flex;
+  width: 873.5px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.main .main__title {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #ffffff;
+  width: 393px;
+  margin-top: 30.72px;
+  margin-bottom: 24px;
+}
+.main .main__subtitle {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  color: rgba(255, 255, 255, 0.8);
+  width: 381px;
+}
+
+@media (max-width: 1023px) {
+  .main {
+    padding-top: 0;
+  }
+  .main::before {
+    display: none;
+  }
+  .main .main__container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .main .main__wrapper {
+    padding-top: 25px;
+    background-image: url("../img/head_bike_desc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -50px;
+    height: 340px;
+  }
+  .main .main__logo {
+    margin-left: 21px;
+  }
+  .main .main__title {
+    font-size: 30px;
+    width: 525px;
+    margin: 0 auto;
+    margin-top: 78.72px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .main .main__subtitle {
+    font-size: 18px;
+    text-align: center;
+    width: 435px;
+    margin: 0 auto;
+  }
+}
+.form {
+  width: 327px;
+}
+.form .form__desc {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.form .form__input {
+  width: 327px;
+  height: 48px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding-left: 29px;
+}
+.form .form__input::-moz-placeholder {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(28, 28, 28, 0.5);
+}
+.form .form__input:-ms-input-placeholder {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(28, 28, 28, 0.5);
+}
+.form .form__input::placeholder {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(28, 28, 28, 0.5);
+}
+.form .form__btn {
+  border: none;
+  outline: none;
+  width: 327px;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: #0AD9C6;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 1023px) {
+  .form {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form .form__desc {
+    width: 321px;
+    color: #000000;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .form .form__input {
+    border: 1px solid #C9CCD4;
+    width: 321px;
+    height: 48px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .form .form__btn {
+    width: 321px;
+    height: 48px;
+    margin: 0 auto;
+  }
+}

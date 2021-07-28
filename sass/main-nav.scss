@@ -1,0 +1,126 @@
+.main-nav {
+  .main-nav__btn {
+    display: none;
+  }
+
+  .main-nav__list {
+    list-style: none;
+    width: 873.5px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 21px;
+    padding: 0 24px 9px 19px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .main-nav__item a {
+    text-decoration: none;
+    font-family: $custom-font;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .main-nav__item a:hover,
+  .main-nav__item a:focus {
+    color: rgba(255, 255, 255, 1);
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .main-nav {
+    .main-nav__list,
+    .main-nav__list--opened,
+    .main-nav__list--no-js {
+      flex-direction: column;
+      justify-content: start;
+      width: 100%;
+      height: 568px;
+      margin: 0;
+      padding: 0;
+      margin-top: 100px;
+    }
+
+    .main-nav__list--closed {
+      display: none;
+    }
+
+    .main-nav__item {
+      height: 60px;
+      background-color: $light-grey;
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .main-nav__item::after {
+      content: "";
+      position: absolute;
+      width: 7.4px;
+      height: 12px;
+      background-image: url("../img/arrow.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 23px;
+      right: 25px;
+    }
+
+    .main-nav__item a {
+      color: $menu-font-grey;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .main-nav--closed {
+      display: none;
+    }
+
+    .main-nav__btn--cross {
+      display: block;
+      width: 22px;
+      height: 22px;
+      padding: 0;
+      position: absolute;
+      border: none;
+      background-color: #FFFFFF;
+      background-image: url("../img/cross.svg");
+      background-size: cover;
+      top: 15px;
+      right: 14px;
+      cursor: pointer;
+    }
+
+    .main-nav__btn--burger {
+      display: block;
+      width: 22px;
+      height: 13.5px;
+      position: absolute;
+      border: none;
+      background-color: transparent;
+      background-image: url("../img/burger.svg");
+      background-size: contain;
+      top: 18.5px;
+      right: 13.75px;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: $light-blue;
+        top: -135%;
+        right: -63%;
+        z-index: -1;
+      }
+    }
+  }
+
+}
