@@ -125,26 +125,16 @@ body {
   }
   .main-nav .main-nav__btn--burger {
     display: block;
-    width: 22px;
-    height: 13.5px;
-    position: absolute;
-    border: none;
-    background-color: transparent;
-    background-image: url("../img/burger.svg");
-    background-size: contain;
-    top: 18.5px;
-    right: 13.75px;
-    cursor: pointer;
-  }
-  .main-nav .main-nav__btn--burger::before {
-    content: "";
-    position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #0AD9C6;
-    top: -135%;
-    right: -63%;
-    z-index: -1;
+    position: absolute;
+    border: none;
+    background-image: url("../img/burger.svg");
+    background-size: contain;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 10;
   }
 }
 .main {
@@ -155,9 +145,10 @@ body {
 .main::before {
   content: "";
   position: absolute;
-  width: 1440px;
+  width: 100vw;
   height: 825px;
   background-image: url("../img/head_bike_desc.png");
+  background-size: cover;
   z-index: -10;
   margin-left: auto;
   margin-right: auto;
@@ -226,6 +217,29 @@ body {
     text-align: center;
     width: 435px;
     margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .main .main__wrapper {
+    height: 390px;
+    background-image: url("../img/head_bike_mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    box-sizing: border-box;
+    margin-bottom: 70px;
+    position: relative;
+  }
+  .main .main__logo {
+    margin-left: 16px;
+  }
+  .main .main__title {
+    width: 288px;
+    line-height: 42px;
+    margin-top: 74.72px;
+  }
+  .main .main__subtitle {
+    width: 288px;
   }
 }
 .form {
@@ -310,5 +324,12 @@ body {
     width: 321px;
     height: 48px;
     margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .form .form__desc,
+.form .form__input,
+.form .form__btn {
+    width: 288px;
   }
 }

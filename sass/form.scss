@@ -75,3 +75,13 @@
     }
   }
 }
+
+@media (max-width: $mobile-width) {
+  .form {
+    .form__desc,
+    .form__input,
+    .form__btn {
+      width: 288px;
+    }
+  }
+}
