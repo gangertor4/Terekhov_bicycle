@@ -1,5 +1,6 @@
 .form {
   width: 327px;
+  margin-bottom: 240px;
 
   .form__desc {
     font-family: $custom-font;
@@ -50,6 +51,7 @@
     width: 100%;
     margin: 0 auto;
     margin-top: 70px;
+    margin-bottom: 70px;
     display: flex;
     flex-direction: column;
 
