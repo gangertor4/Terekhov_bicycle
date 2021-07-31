@@ -10,6 +10,13 @@
     height: 825px;
     background-image: url("../img/head_bike_desc.png");
     background-size: cover;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/head_bike_desc@2x.png");
+      background-size: cover;
+    }
+
     z-index: -10;
     margin-left: auto;
     margin-right: auto;
@@ -20,7 +27,7 @@
 
   .main__container {
     display: flex;
-    width: 873.5px;
+    width: 878px;
     margin: 0 auto;
     justify-content: space-between;
   }
@@ -30,9 +37,10 @@
     font-size: 46px;
     font-weight: 700;
     line-height: 64px;
+    letter-spacing: -0.005em;
     color: $basic-white;
     width: 393px;
-    margin-top: 30.72px;
+    margin-top: 25px;
     margin-bottom: 24px;
   }
 
@@ -66,7 +74,14 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position-y: -50px;
-      height: 340px;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url("../img/head_bike_desc@2x.png");
+        background-size: cover;     
+      }
+
+      height: 315px;
     }
 
     .main__logo {
@@ -77,8 +92,8 @@
       font-size: 30px;
       width: 525px;
       margin: 0 auto;
-      margin-top: 78.72px;
-      margin-bottom: 20px;
+      margin-top: 75px;
+      margin-bottom: 10px;
       text-align: center;
     }
 
@@ -99,8 +114,14 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position-y: 0;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url("../img/head_bike_mobile@2x.png");
+        background-size: cover;
+      }
+
       box-sizing: border-box;
-      margin-bottom: 70px;
       position: relative;
     }
     .main__logo {
@@ -110,7 +131,8 @@
     .main__title {
       width: 288px;
       line-height: 42px;
-      margin-top: 74.72px;
+      margin-top: 73px;
+      margin-bottom: 20px;
     }
 
     .main__subtitle {

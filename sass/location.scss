@@ -21,8 +21,15 @@
   .location__map {
     display: block;
     margin: 0 auto;
-    width: calc(100% - 484px);
+    width: calc(100% - 560px);
     height: 530px;
+    background-image: url("../img/map-desc.png");
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-desc@2x.png");
+      background-size: 720px auto;
+    }
   }
 }
 
@@ -40,19 +47,32 @@
 
     .location__map {
       width: calc(100% - 70px);
+      background-image: url("../img/map-tablet.png");
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+      background-size: 720px auto;
+    }
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .location {
+    .location__title {
+      font-size: 18px;
+    }
+
     .location__desc {
+      font-size: 17px;
       margin-bottom: 25px;
-      width: 288px;
+      width: 268px;
     }
 
     .location__map {
       width: 100%;
+      height: 250px;
     }
   }
 }

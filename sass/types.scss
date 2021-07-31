@@ -1,5 +1,5 @@
 .types {
-  padding-top: 149px;
+  padding-top: 171px;
   padding-bottom: 147px;
   background-color: $types-bg;
   width: 100%;
@@ -61,7 +61,7 @@
       width: 47px;
       height: 47px;
       background-image: url("../img/rectangle.svg");
-      bottom: 29px;
+      bottom: 32px;
       right: -23px;
     }
   }
@@ -74,7 +74,7 @@
       height: 95px;
       background-image: url("../img/circle.svg");
       background-size: contain;
-      top: -32px;
+      top: -30px;
       right: -36px;
     }
   }
@@ -95,12 +95,12 @@
 
 @media (max-width: $tablet-width) {
   .types {
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding-top: 57px;
+    padding-bottom: 64px;
 
     .types__title {
       @include title-tablet-font;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     .types__wrapper {
@@ -153,7 +153,7 @@
 
 @media (max-width: $mobile-width) {
   .types {
-    padding-bottom: 50px;
+    padding-bottom: 53px;
 
     .types__wrapper {
       flex-direction: column;
@@ -176,8 +176,8 @@
       margin: 0;
 
       &::before {
-        top: -20px;
-        right: 5px;
+        top: -19px;
+        right: -5px;
       }
     }
 
@@ -185,8 +185,17 @@
       margin-bottom: 40px;
     }
 
+    .types__img {
+      margin-bottom: 15px;
+    }
+
+    .types__img:last-child {
+      margin-bottom: 17px;
+    }
+
     .types__img-desc {
       width: 288px;
+      margin-left: -10px;
     }
   }
 }

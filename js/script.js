@@ -16,3 +16,24 @@ btnToggle.addEventListener('click', function () {
     navMenu.classList.add('main-nav__list--closed');
 }
 })
+
+const phoneInput = document.querySelector('.form__input--phone');
+const inputValidity = /[^a-z]+/g;
+
+const onPhoneConfirmValidity = function () {
+  let symbolsArr = phoneInput.value.split(' ')
+
+  symbolsArr.forEach((symbol) => {
+    const isLetters = symbol.search(inputValidity);
+
+    if (isLetters < 0) {
+      phoneInput.setCustomValidity('Телефон должен содержать только цифры!')
+
+      return
+    } else {
+      phoneInput.setCustomValidity('')
+    }
+  })
+}
+
+phoneInput.addEventListener('input', onPhoneConfirmValidity)

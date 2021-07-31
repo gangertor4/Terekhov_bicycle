@@ -4,6 +4,8 @@ const browserSync = require('browser-sync').create();
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 
+const webp = require("gulp-webp");
+
 gulp.task('sass', function() {
   return gulp.src("sass/style.scss")
       .pipe(sass())
@@ -26,6 +28,12 @@ gulp.task('server', gulp.series('sass', function() {
     gulp.watch("js/*.js").on('change', browserSync.reload);
 }));
 
-
-
 gulp.task('default', gulp.series('server'));
+
+const createWebp = () => {
+  return gulp.src("img/*.{jpg,png}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("img"))
+}
+
+exports.createWebp = createWebp;

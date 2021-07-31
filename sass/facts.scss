@@ -1,14 +1,14 @@
 .facts {
   width: 100%;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 152px;
   margin-bottom: 130px;
 
   .facts__title {
     @include title-font;
     color: $title-black;
     text-align: center;
-    margin-bottom: 102px;
+    margin-bottom: 104px;
   }
 
   .facts__list {
@@ -39,8 +39,8 @@
       font-size: 28px;
       line-height: 38px;
       color: $light-blue;
-      top: -55px;
-      left: 45%;
+      top: -51px;
+      left: 44%;
     }
   }
 }
@@ -48,10 +48,11 @@
 @media (max-width: $tablet-width) {
   .facts {
     margin-top: 0;
+    margin-bottom: 70px;
 
     .facts__title {
       @include title-tablet-font;
-      margin-bottom: 83px;
+      margin-bottom: 91px;
     }
 
     .facts__list {
@@ -70,7 +71,7 @@
     margin-bottom: 0;
 
     .facts__title {
-      margin-bottom: 85px;
+      margin-bottom: 91px;
     }
 
     .facts__list {
@@ -78,10 +79,14 @@
       width: 288px;
     }
 
-    .facts__item,
-    .facts__item:nth-child(2) {
+    .facts__item {
+      font-size: 18px;
       margin: 0 auto;
-      margin-bottom: 80px;
+      margin-bottom: 83px;
+    }
+
+    .facts__item:nth-child(3) {
+      margin-bottom: 95px;
     }
   }
 }
