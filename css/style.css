@@ -297,6 +297,10 @@ body {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 600;
+  transition: background-color 100ms ease-in-out;
+}
+.form .form__btn:hover {
+  background-color: #0cb6a5;
 }
 
 @media (max-width: 1023px) {
@@ -703,5 +707,108 @@ body {
   }
   .types .types__img-desc {
     width: 288px;
+  }
+}
+.video {
+  width: 100%;
+  background: linear-gradient(180deg, #131314 87.8%, #ffffff 87.8%, #ffffff 100%);
+  padding-top: 120px;
+  margin-bottom: 150px;
+}
+.video .video__title {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.video .video__desc {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: rgba(255, 255, 255, 0.7);
+  width: 340px;
+  margin: 0 auto;
+  margin-bottom: 56px;
+}
+.video .video__preview {
+  margin: 0 auto;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  position: relative;
+}
+.video .video__preview::before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-image: url("../img/play-btn.svg");
+  top: 229px;
+  left: 432px;
+  transform: scale(1);
+  transition: transform 100ms ease-in-out;
+}
+.video .video__preview:hover::before {
+  transform: scale(1.15);
+}
+
+@media (max-width: 1023px) {
+  .video {
+    background: linear-gradient(180deg, #131314 82.9%, #ffffff 82.9%, #ffffff 100%);
+    margin-bottom: 70px;
+    padding-top: 70px;
+  }
+  .video .video__title {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.005em;
+  }
+  .video .video__desc {
+    width: 429px;
+    margin-bottom: 40px;
+  }
+  .video .video__preview img {
+    width: 503px;
+    height: 282px;
+  }
+  .video .video__preview::before {
+    width: 90.36px;
+    height: 90.36px;
+    background-size: contain;
+    top: 96px;
+    left: 206px;
+  }
+}
+@media (max-width: 767px) {
+  .video {
+    background: linear-gradient(180deg, #131314 88.6%, #ffffff 88.6%, #ffffff 100%);
+    padding-top: 84px;
+    margin-bottom: 70.34px;
+  }
+  .video .video__desc {
+    width: 288px;
+    margin-bottom: 50px;
+  }
+  .video .video__preview img {
+    width: 288px;
+    height: 161.66px;
+  }
+  .video .video__preview::before {
+    width: 65px;
+    height: 65px;
+    top: 48px;
+    left: 112px;
   }
 }

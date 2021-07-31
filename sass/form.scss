@@ -43,6 +43,11 @@
     font-family: $custom-font;
     font-size: 15px;
     font-weight: 600;
+    transition: background-color 100ms ease-in-out;
+  }
+
+  .form__btn:hover {
+    background-color: $darker-blue;
   }
 }
 
