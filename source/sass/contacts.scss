@@ -6,41 +6,41 @@
   display: flex;
   width: 507px;
   justify-content: space-between;
+}
 
-  .contacts__item {
-    text-decoration: none;
-    font-family: $custom-font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: $contacts-grey;
-    position: relative;
-  }
+.contacts__item {
+  text-decoration: none;
+  font-family: $custom-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $contacts-grey;
+  position: relative;
+}
 
-  .contacts__item:hover, 
-  .contacts__item:focus {
-    color: $location-desc;
-  }
+.contacts__item:hover,
+.contacts__item:focus {
+  color: $location-desc;
+}
 
-  .contacts__item--email::before {
-    content: "";
-    position: absolute;
-    width: 26px;
-    height: 20px;
-    background-image: url("../img/icon-mail.svg");
-    left: -36px;
-    top: 3px;
-  }
+.contacts__item--email::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 20px;
+  background-image: url("../img/icon-mail.svg");
+  left: -36px;
+  top: 3px;
+}
 
-  .contacts__item--phone::before {
-    content: "";
-    position: absolute;
-    width: 21.5px;
-    height: 22.62px;
-    background-image: url("../img/icon-phone.svg");
-    left: -35px;
-    top: -2px;
-  }
+.contacts__item--phone::before {
+  content: "";
+  position: absolute;
+  width: 21.5px;
+  height: 22.62px;
+  background-image: url("../img/icon-phone.svg");
+  left: -35px;
+  top: -2px;
 }
 
 @media (max-width: $tablet-width) {
@@ -59,26 +59,26 @@
     margin-top: 25px;
     margin-bottom: 51px;
     padding-left: 15px;
+  }
 
-    .contacts__item {
-      text-align: center;
-      margin-left: 35px;
-    }
+  .contacts__item {
+    text-align: center;
+    margin-left: 35px;
+  }
 
-    .contacts__item--email {
-      margin-bottom: 25px;
-    }
+  .contacts__item--email {
+    margin-bottom: 25px;
+  }
 
-    .contacts__item--phone {
-      margin-left: 10px;
-    }
+  .contacts__item--phone {
+    margin-left: 10px;
+  }
 
-    .contacts__item--email::before {
-      left: -27px;
-    }
+  .contacts__item--email::before {
+    left: -27px;
+  }
 
-    .contacts__item--phone::before {
-      left: 25px;
-    }
+  .contacts__item--phone::before {
+    left: 25px;
   }
 }

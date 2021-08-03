@@ -32,7 +32,7 @@
     justify-content: space-between;
   }
 
-  .main__title {
+  h1 {
     font-family: $custom-font;
     font-size: 46px;
     font-weight: 700;
@@ -44,7 +44,7 @@
     margin-bottom: 24px;
   }
 
-  .main__subtitle {
+  p {
     font-family: $custom-font;
     font-size: 20px;
     font-weight: 300;
@@ -78,17 +78,17 @@
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
         background-image: url("../img/head_bike_desc@2x.png");
-        background-size: cover;     
+        background-size: cover;
       }
 
       height: 315px;
     }
 
-    .main__logo {
+    img {
       margin-left: 21px;
     }
 
-    .main__title {
+    h1 {
       font-size: 30px;
       width: 525px;
       margin: 0 auto;
@@ -97,7 +97,7 @@
       text-align: center;
     }
 
-    .main__subtitle {
+    p {
       font-size: 18px;
       text-align: center;
       width: 435px;
@@ -124,18 +124,19 @@
       box-sizing: border-box;
       position: relative;
     }
-    .main__logo {
+
+    img {
       margin-left: 16px;
     }
 
-    .main__title {
+    h1 {
       width: 288px;
       line-height: 42px;
       margin-top: 73px;
       margin-bottom: 20px;
     }
 
-    .main__subtitle {
+    p {
       width: 288px;
     }
   }

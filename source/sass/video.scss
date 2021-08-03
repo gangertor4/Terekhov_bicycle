@@ -4,15 +4,12 @@
   padding-top: 120px;
   margin-bottom: 148px;
 
-  .video__title {
-    @include title-font;
+  h2 {
     color: $basic-white;
-    margin: 0 auto;
-    text-align: center;
     margin-bottom: 20px;
   }
 
-  .video__desc {
+  p {
     font-family: $custom-font;
     font-weight: 300;
     font-size: 16px;
@@ -24,30 +21,30 @@
     margin: 0 auto;
     margin-bottom: 56px;
   }
+}
 
-  .video__preview {
-    margin: 0 auto;
-    display: flex;
-    width: fit-content;
-    justify-content: center;
-    position: relative;
+.video__preview {
+  margin: 0 auto;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 65px;
-      height: 65px;
-      background-image: url("../img/play-btn.svg");
-      top: 229px;
-      left: 432px;
-      cursor: pointer;
-      transform: scale(1);
-      transition: transform 100ms ease-in-out;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background-image: url("../img/play-btn.svg");
+    top: 229px;
+    left: 432px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 100ms ease-in-out;
+  }
 
-    &:hover::before {
-      transform: scale(1.15);
-    }
+  &:hover::before {
+    transform: scale(1.15);
   }
 }
 
@@ -57,27 +54,23 @@
     margin-bottom: 70px;
     padding-top: 70px;
 
-    .video__title {
-      @include title-tablet-font;
-    }
-
-    .video__desc {
+    p {
       width: 429px;
       margin-bottom: 40px;
     }
 
-    .video__preview img {
+    img {
       width: 503px;
       height: 282px;
     }
+  }
 
-    .video__preview::before {
-      width: 90.36px;
-      height: 90.36px;
-      background-size: contain;
-      top: 96px;
-      left: 206px;
-    }
+  .video__preview::before {
+    width: 90.36px;
+    height: 90.36px;
+    background-size: contain;
+    top: 96px;
+    left: 206px;
   }
 }
 
@@ -86,22 +79,22 @@
     background: linear-gradient(180deg, $video-bg-black 88.6%, $basic-white 88.6%, $basic-white 100%);
     padding-top: 84px;
     margin-bottom: 70.34px;
-    
-    .video__desc {
+
+    p {
       width: 288px;
       margin-bottom: 52px;
     }
 
-    .video__preview img {
+    img {
       width: 288px;
       height: 161.66px;
     }
+  }
 
-    .video__preview::before {
-      width: 65px;
-      height: 65px;
-      top: 48px;
-      left: 112px;
-    }
+  .video__preview::before {
+    width: 65px;
+    height: 65px;
+    top: 48px;
+    left: 112px;
   }
 }

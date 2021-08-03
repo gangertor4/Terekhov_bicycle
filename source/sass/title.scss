@@ -1,0 +1,15 @@
+.title {
+  font-family: $custom-font;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+  .title {
+    font-size: 24px;
+  }
+}
