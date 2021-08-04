@@ -17,6 +17,7 @@ if (typeof btnToggle !== 'undefined') {
 
       itemContainer.onclick = (evt) => {
         if (evt.target === menuItem) {
+          console.log('SHIT')
           body.classList.remove('body-lock')
         }
       }
@@ -30,3 +31,39 @@ if (typeof btnToggle !== 'undefined') {
     }
   });
 }
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const blockID = anchor.getAttribute('href').substr(1);
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+}
+
+const phoneInput = document.querySelector('#phone');
+const inputValidity = /[^a-z]+/g;
+
+const onPhoneConfirmValidity = function () {
+  let symbolsArr = phoneInput.value.split(' ');
+
+  symbolsArr.forEach((symbol) => {
+    const isLetters = symbol.search(inputValidity);
+
+    if (isLetters < 0) {
+      phoneInput.setCustomValidity('Телефон должен содержать только цифры!');
+
+      return;
+    } else {
+      phoneInput.setCustomValidity('');
+    }
+  });
+};
+
+phoneInput.addEventListener('input', onPhoneConfirmValidity);

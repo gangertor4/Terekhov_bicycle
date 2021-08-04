@@ -8,8 +8,7 @@
     width: 873.5px;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-top: 21px;
-    padding: 0 24px 9px 19px;
+    padding: 21px 24px 9px 19px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -38,7 +37,7 @@
       flex-direction: column;
       justify-content: start;
       width: 100%;
-      height: 568px;
+      min-height: 568px;
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -50,7 +49,7 @@
     }
 
     .main-nav__item {
-      height: 60px;
+      min-height: 60px;
       background-color: $light-grey;
       display: flex;
       align-items: center;

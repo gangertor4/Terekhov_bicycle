@@ -1,36 +1,27 @@
+header {
+  width: 100vw;
+  min-height: 825px;
+  background-image: url("../img/head_bike_desc.png");
+  background-size: cover;
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/head_bike_desc@2x.png");
+    background-size: cover;
+  }
+
+  @media (max-width: $tablet-width) {
+    background: none;
+  }
+}
+
 .main {
   position: relative;
   padding-top: 256px;
-
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 825px;
-    background-image: url("../img/head_bike_desc.png");
-    background-size: cover;
-
-    @media (min-resolution: 144dpi),
-      (min-resolution: 1.5dppx) {
-      background-image: url("../img/head_bike_desc@2x.png");
-      background-size: cover;
-    }
-
-    z-index: -10;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: -63px;
-  }
-
-  .main__container {
-    display: flex;
-    width: 878px;
-    margin: 0 auto;
-    justify-content: space-between;
-  }
+  display: flex;
+  width: 878px;
+  margin: 0 auto;
+  justify-content: space-between;
 
   h1 {
     font-family: $custom-font;
@@ -58,15 +49,8 @@
 @media (max-width: $tablet-width) {
   .main {
     padding-top: 0;
-
-    &::before {
-      display: none;
-    }
-
-    .main__container {
-      flex-direction: column;
-      width: 100%;
-    }
+    flex-direction: column;
+    width: 100%;
 
     .main__wrapper {
       padding-top: 25px;
@@ -109,7 +93,7 @@
 @media (max-width: $mobile-width) {
   .main {
     .main__wrapper {
-      height: 390px;
+      min-height: 390px;
       background-image: url("../img/head_bike_mobile.png");
       background-size: cover;
       background-repeat: no-repeat;

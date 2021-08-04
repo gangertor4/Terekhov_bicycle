@@ -1,4 +1,4 @@
-const phoneInput = document.querySelector('.form__input--phone');
+const phoneInput = document.querySelector('#phone');
 const inputValidity = /[^a-z]+/g;
 
 const onPhoneConfirmValidity = function () {
