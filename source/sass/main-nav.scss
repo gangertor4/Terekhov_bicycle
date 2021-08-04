@@ -46,7 +46,10 @@
 
     .main-nav__list--opened {
       height: 100vh;
-      overflow: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-right: 17px;
+      box-sizing: content-box;
     }
 
     .main-nav__list--opened::-webkit-scrollbar {
