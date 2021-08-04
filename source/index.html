@@ -38,10 +38,12 @@
         </div>
         <form class="main__form form" method="post" action="https://echo.htmlacademy.ru">
           <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-          <label for="name"></label>
-          <input type="email" name="user-name" id="name" placeholder="Введите Ваше Имя">
-          <label for="phone"></label>
-          <input type="tel" name="user-phone" id="phone" placeholder="Введите Ваш номер телефона">
+          <label for="name">
+            <input type="email" name="user-name" id="name" placeholder="Введите Ваше Имя" required>
+          </label>
+          <label for="phone">
+            <input type="tel" name="user-phone" id="phone" placeholder="Введите Ваш номер телефона" required>
+          </label>
           <button type="submit" class="form__btn">Подобрать велосипед мечты</button>
         </form>
     </section>
