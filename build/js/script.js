@@ -1,10 +1,33 @@
 const btnToggle = document.querySelector('.main-nav__btn');
 const navMenu = document.querySelector('.main-nav__list');
 const body = document.querySelector('body');
-const itemContainer = document.querySelector('.main-nav__item');
-const menuItem = document.querySelector('.main-nav__item a');
+const menuItems = document.querySelectorAll('.main-nav__item a');
 
 navMenu.classList.add('main-nav__list--closed');
+
+const closeMenu = () => {
+  btnToggle.classList.remove('main-nav__btn--cross');
+  btnToggle.classList.add('main-nav__btn--burger');
+  navMenu.classList.remove('main-nav__list');
+  navMenu.classList.add('main-nav__list--closed');
+  body.classList.remove('body-lock');
+}
+
+menuItems.forEach(item => {
+  item.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
+    if (window.matchMedia('(max-width: 1023px)').matches) {
+      closeMenu();
+    }
+    document
+      .querySelector(evt.target.getAttribute('href'))
+      .scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+    });
+  })
+})
 
 if (typeof btnToggle !== 'undefined') {
   btnToggle.addEventListener('click', () => {
@@ -14,20 +37,8 @@ if (typeof btnToggle !== 'undefined') {
       navMenu.classList.remove('main-nav__list--closed');
       navMenu.classList.add('main-nav__list');
       body.classList.add('body-lock');
-
-      itemContainer.onclick = (evt) => {
-        if (evt.target === menuItem) {
-          console.log('SHIT')
-          body.classList.remove('body-lock')
-        }
-      }
-
     } else {
-      btnToggle.classList.remove('main-nav__btn--cross');
-      btnToggle.classList.add('main-nav__btn--burger');
-      navMenu.classList.remove('main-nav__list');
-      navMenu.classList.add('main-nav__list--closed');
-      body.classList.remove('body-lock');
+      closeMenu();
     }
   });
 }
