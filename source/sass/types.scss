@@ -115,7 +115,7 @@
     }
 
     .types__box--mount {
-      margin-bottom: 50px;
+      margin-bottom: 45px;
 
       &::before,
       &::after {
@@ -150,7 +150,7 @@
 
 @media (max-width: $mobile-width) {
   .types {
-    padding-bottom: 53px;
+    padding-bottom: 14px;
 
     .types__wrapper {
       flex-direction: column;
@@ -171,6 +171,7 @@
 
     .types__box--kids {
       margin: 0;
+      margin-top: 3px;
 
       &::before {
         top: -19px;

@@ -12,6 +12,7 @@ header {
 
   @media (max-width: $tablet-width) {
     background: none;
+    min-height: fit-content;
   }
 }
 
