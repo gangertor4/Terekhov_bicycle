@@ -46,7 +46,7 @@
 @media (max-width: $tablet-width) {
   .facts {
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 0;
 
     h2 {
       margin-bottom: 91px;
@@ -58,7 +58,7 @@
     flex-wrap: wrap;
   }
 
-  .facts__item:nth-child(2) {
+  .facts__item:nth-child(2n) {
     margin-bottom: 93px;
   }
 }
@@ -83,7 +83,7 @@
     margin-bottom: 83px;
   }
 
-  .facts__item:nth-child(3) {
+  .facts__item:nth-child(3n) {
     margin-bottom: 95px;
   }
 }

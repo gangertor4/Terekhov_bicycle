@@ -92,6 +92,7 @@
 
 @media (max-width: $tablet-width) {
   .types {
+    margin-top: -22px;
     padding-top: 57px;
     padding-bottom: 64px;
 
@@ -150,6 +151,7 @@
 
 @media (max-width: $mobile-width) {
   .types {
+    margin-top: -12px;
     padding-bottom: 14px;
 
     .types__wrapper {
@@ -185,6 +187,10 @@
 
     img {
       margin-bottom: 15px;
+    }
+
+    .types__box--mount img {
+      margin-bottom: 18px;
     }
 
     .types__box--kids img {

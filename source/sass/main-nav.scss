@@ -44,11 +44,21 @@
       margin-top: 100px;
     }
 
+    .main-nav__list--opened {
+      height: 100vh;
+      overflow: auto;
+    }
+
+    .main-nav__list--opened::-webkit-scrollbar {
+      display: none;
+    }
+
     .main-nav__list--closed {
       display: none;
     }
 
     .main-nav__item {
+      width: 100%;
       min-height: 60px;
       background-color: $light-grey;
       display: flex;
@@ -91,7 +101,7 @@
       background-image: url("../img/cross.svg");
       background-size: cover;
       top: 15px;
-      right: 14px;
+      right: -3px;
       cursor: pointer;
     }
 

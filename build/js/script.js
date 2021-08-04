@@ -8,34 +8,36 @@ navMenu.classList.add('main-nav__list--closed');
 const closeMenu = () => {
   btnToggle.classList.remove('main-nav__btn--cross');
   btnToggle.classList.add('main-nav__btn--burger');
-  navMenu.classList.remove('main-nav__list');
+  navMenu.classList.remove('main-nav__list--opened');
   navMenu.classList.add('main-nav__list--closed');
   body.classList.remove('body-lock');
-}
+};
 
-menuItems.forEach(item => {
-  item.addEventListener('click', (evt) => {
-    evt.preventDefault();
+if (menuItems) {
+  menuItems.forEach((item) => {
+    item.addEventListener('click', (evt) => {
+      evt.preventDefault();
 
-    if (window.matchMedia('(max-width: 1023px)').matches) {
-      closeMenu();
-    }
-    document
-      .querySelector(evt.target.getAttribute('href'))
-      .scrollIntoView({
+      if (window.matchMedia('(max-width: 1023px)').matches) {
+        closeMenu();
+      }
+      document
+        .querySelector(evt.target.getAttribute('href'))
+        .scrollIntoView({
           behavior: 'smooth',
           block: 'start',
+        });
     });
-  })
-})
+  });
+}
 
-if (typeof btnToggle !== 'undefined') {
+if (btnToggle) {
   btnToggle.addEventListener('click', () => {
     if (btnToggle.classList.contains('main-nav__btn--burger')) {
       btnToggle.classList.remove('main-nav__btn--burger');
       btnToggle.classList.add('main-nav__btn--cross');
       navMenu.classList.remove('main-nav__list--closed');
-      navMenu.classList.add('main-nav__list');
+      navMenu.classList.add('main-nav__list--opened');
       body.classList.add('body-lock');
     } else {
       closeMenu();

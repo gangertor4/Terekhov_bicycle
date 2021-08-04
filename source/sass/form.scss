@@ -69,6 +69,11 @@
       letter-spacing: 0.03em;
     }
 
+    label {
+      display: flex;
+      justify-content: center;
+    }
+
     input {
       border: 1px solid $border-grey;
       width: 321px;
