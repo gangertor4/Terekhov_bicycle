@@ -29,6 +29,7 @@
   width: fit-content;
   justify-content: center;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -79,6 +80,8 @@
     background: linear-gradient(180deg, $video-bg-black 88.6%, $basic-white 88.6%, $basic-white 100%);
     padding-top: 83px;
     margin-bottom: 70.34px;
+    padding-left: 16px;
+    padding-right: 16px;
 
     p {
       width: 288px;
@@ -86,9 +89,14 @@
     }
 
     img {
-      width: 288px;
-      height: 161.66px;
+      max-width: 100%;
+      max-height: 100%;
     }
+  }
+
+  .video__wrapper {
+    min-width: 288px;
+    height: 161.66px;
   }
 
   .video__preview::before {

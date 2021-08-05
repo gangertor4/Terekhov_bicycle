@@ -13,8 +13,8 @@
 <body>
   <header class="page-header">
     <nav class="main-nav">
-      <button type="button" class="main-nav__btn main-nav__btn--burger"></button>
-      <ul class="main-nav__list main-nav__list--closed">
+      <button type="button" class="main-nav__btn main-nav__btn--closed"></button>
+      <ul class="main-nav__list">
         <li class="main-nav__item">
           <a href="#facts">О нас</a>
         </li>
@@ -32,7 +32,9 @@
 
     <section class="main">
         <div class="main__wrapper">
-          <img src="img/moon_logo.svg" alt="Логотип магазина Moon" width="68" height="20">
+          <a href="#">
+            <img src="img/moon_logo.svg" alt="Логотип магазина Moon" width="68" height="20">
+          </a>
           <h1>Мы продаем велосипеды</h1>
           <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
@@ -66,7 +68,7 @@
         <picture>
           <!-- 1х: 503px; 2x: 1006px -->
           <source type="image/webp" srcset="img/road_bike.webp 1x, img/road_bike@2x.webp 2x">
-          <img src="img/road_bike.png" srcset="img/road_bike@2x.png 2x" alt="Изображение дорожного велосипеда" width="342" height="503">
+          <img src="img/road-bike-t.png" srcset="img/road-bike-t@2x.png 2x" alt="Изображение дорожного велосипеда" width="342" height="503">
         </picture>
         <span>Дорожный велосипед</span>
       </div>
@@ -74,7 +76,7 @@
         <picture>
           <source type="image/webp" srcset="img/mount_bike.webp 1x, img/mount_bike@2x.webp 2x">
           <!-- 1х: 566px; 2x: 1132px -->
-          <img src="img/mount_bike.png" srcset="img/mount_bike@2x.png 2x" alt="Изображение горного велосипеда" width="342" height="566">
+          <img src="img/mount-bike-t.png" srcset="img/mount-bike-t@2x.png 2x" alt="Изображение горного велосипеда" width="342" height="566">
         </picture>
         <span>Горный велосипед</span>
       </div>
@@ -82,7 +84,7 @@
         <picture>
           <source type="image/webp" srcset="img/kids_bike.webp 1x, img/kids_bike@2x.webp 2x">
           <!-- 1х: 513px; 2x: 1026px -->
-          <img src="img/kids_bike.png" srcset="img/kids_bike@2x.png 2x" alt="Изображение детского велосипеда" width="342" height="513">
+          <img src="img/kids-bike-t.png" srcset="img/kids-bike-t@2x.png 2x" alt="Изображение детского велосипеда" width="342" height="513">
         </picture>
         <span>Детский велосипед</span>
       </div>
@@ -95,12 +97,14 @@
     <div class="video__preview">
       <picture>
         <source type="image/webp" srcset="img/bike_video.webp 1x, img/bike_video@2x.webp 2x">
-        <img src="img/bike_video.png" srcset="img/bike_video@2x.png 2x" alt="Видео про велосипеды" width="929" height="522">
+        <div class="video__wrapper">
+          <img src="img/bike_video.png" srcset="img/bike_video@2x.png 2x" alt="Видео про велосипеды" width="929" height="522" tabindex="0">
+        </div>
       </picture>
     </div>
   </section>
 
-  <footer>
+  <footer class="page-footer">
     <section class="location" id="map">
       <h2 class="title">Как нас найти?</h2>
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>

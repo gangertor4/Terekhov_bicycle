@@ -13,7 +13,8 @@
   .types__wrapper {
     margin: 0 auto;
     display: flex;
-    width: 1126px;
+    flex-wrap: wrap;
+    max-width: 1126px;
     justify-content: space-between;
   }
 
@@ -90,7 +91,7 @@
   }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: 1250px) {
   .types {
     margin-top: -22px;
     padding-top: 57px;
@@ -141,10 +142,15 @@
     }
 
     img {
+      border-radius: 10px;
       object-fit: cover;
       width: 270px;
       height: 300px;
       margin-bottom: 20px;
+    }
+
+    .types__box--kids img {
+      object-position: 50% 65%;
     }
   }
 }

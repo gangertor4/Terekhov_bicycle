@@ -4,6 +4,8 @@ const body = document.querySelector('body');
 const menuItems = document.querySelectorAll('.main-nav__item a');
 
 navMenu.classList.add('main-nav__list--closed');
+btnToggle.classList.remove('main-nav__btn--closed');
+btnToggle.classList.add('main-nav__btn--burger');
 
 const closeMenu = () => {
   btnToggle.classList.remove('main-nav__btn--cross');

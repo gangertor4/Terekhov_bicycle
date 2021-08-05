@@ -10,6 +10,7 @@
     margin: 0 auto;
     padding: 21px 24px 9px 19px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
@@ -49,7 +50,7 @@
       overflow-y: auto;
       overflow-x: hidden;
       padding-right: 17px;
-      box-sizing: content-box;
+      box-sizing: border-box;
     }
 
     .main-nav__list--opened::-webkit-scrollbar {
@@ -93,6 +94,10 @@
       display: none;
     }
 
+    .main-nav__btn--closed {
+      display: none;
+    }
+
     .main-nav__btn--cross {
       display: block;
       width: 22px;
@@ -104,7 +109,7 @@
       background-image: url("../img/cross.svg");
       background-size: cover;
       top: 15px;
-      right: -3px;
+      right: 3px;
       cursor: pointer;
     }
 

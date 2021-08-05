@@ -2,7 +2,7 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 152px;
-  margin-bottom: 130px;
+  margin-bottom: 60px;
 
   h2 {
     color: $title-black;
@@ -12,7 +12,8 @@
 
 .facts__list {
   display: flex;
-  width: 1166px;
+  flex-wrap: wrap;
+  max-width: 1166px;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0;
@@ -28,6 +29,7 @@
   line-height: 34px;
   letter-spacing: -0.5px;
   text-align: center;
+  margin-bottom: 70px;
   counter-increment: my-counter;
   position: relative;
 
