@@ -48,22 +48,32 @@ if (btnToggle) {
 }
 
 const phoneInput = document.querySelector('#phone');
-const inputValidity = /[^a-z]+/g;
+const inputValidity = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 
-const onPhoneConfirmValidity = function () {
-  let symbolsArr = phoneInput.value.split(' ');
+// const onPhoneConfirmValidity = function () {
+//   let symbolsArr = phoneInput.value.split(' ');
 
-  symbolsArr.forEach((symbol) => {
-    const isLetters = symbol.search(inputValidity);
+//   symbolsArr.forEach((symbol) => {
+//     const isLetters = symbol.search(inputValidity);
 
-    if (isLetters < 0) {
-      phoneInput.setCustomValidity('Телефон должен содержать только цифры!');
+//     if (isLetters < 0) {
+//       phoneInput.setCustomValidity('Телефон должен содержать только цифры!');
 
-      return;
-    } else {
-      phoneInput.setCustomValidity('');
-    }
-  });
-};
+//       return;
+//     } else {
+//       phoneInput.setCustomValidity('');
+//     }
+//   });
+// };
+
+const onPhoneConfirmValidity = () => {
+  if (!inputValidity.test(phoneInput.value)) {
+    phoneInput.setCustomValidity('Телефон должен содержать только цифры!');
+
+    return;
+  }
+
+  phoneInput.setCustomValidity('');
+}
 
 phoneInput.addEventListener('input', onPhoneConfirmValidity);
