@@ -17,6 +17,7 @@
   line-height: 22px;
   color: $contacts-grey;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .contacts__item:hover,
@@ -34,7 +35,6 @@
   width: 190px;
   padding-left: 37px;
   box-sizing: border-box;
-  margin-bottom: 10px;
 }
 
 .contacts__item--email::before {

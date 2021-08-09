@@ -27,6 +27,11 @@
     color: rgba(255, 255, 255, 0.8);
     width: 381px;
   }
+
+  a {
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 @media (max-width: $tablet-width) {
